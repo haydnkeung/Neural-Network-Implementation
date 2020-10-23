@@ -13,3 +13,14 @@ Afterwards, the three matricies are stacked together to form an input feature ve
 ## Network architecture
 
 Initial iterations of this project utilized logistic regressions and tanh functions as the hidden layer. However, it was observed that for large inputs to the activation function, the gradient became very small making the learning rate very slow. For now, the RELU activation function is used for the hidden layers. For the output layer, a logistic regression is used since the range of the function in between 0 and 1 making it a suitable choice to represent the probability of a picture being a dog. 1 denotes with 100% probability that the picture is a dog and 0 denote 0% probability being a dog (hence the picture is a cat).
+
+## Forward Propagation
+
+For the loss function, the "Cross Entropy Loss Function" is used for the network because the graph is convex yielding a unique minimum point. For the "i-th" training example, let "y-hat-i" be the predicted value of whether the picture is a cat/dog and "y-i" be the actual result of whether the picture is a cat/dog then the loss function for a particular example is computed as follow.
+
+![Loss function](loss_function.png)
+
+To compute the total cost function over all the example we then attempt to minimize the average of the loss function over all training examples.
+Let "J(w,b)" be the cost function. The cost function accepts the tensor "W" holding the weights of all the neurons in the network and a row vector "b" representing the weights for each of the layers. The values "W" and "b" are used to compute "y-hat-i" which is the prediction of the neural network. Then the cost function is computed as follow
+
+![Cost function](cost_function.png)
