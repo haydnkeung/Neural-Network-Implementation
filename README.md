@@ -36,4 +36,4 @@ Let "J(w,b)" be the cost function. The cost function accepts the tensor "W" hold
 For the backward propagation, the partial derivatives of the cost function J(w,b) is computed with respect to all the internal parameters of the neural network, those parameters being the weights of all neurons and the bias for each of the layers. Lastly, the parameters are updated by subtracting the learning rate * the derivative of J with respect to the variables.
 For example, let "b" be a parameter representing the bias and "q" be the learning rate. The new "b" would be computed as follow
 
-![Updating Variable](updating_var.jpg)
+![Updating Variable](rsz_updating_var.jpg)
